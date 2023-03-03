@@ -53,6 +53,7 @@ if (isset($_POST['totalh'])){
 
 //Hasil dari input bawah
 @ $bayar = $_POST['bayar'];
+@ $hasilj = $_POST['hasilj'];
 
 //END hasil dari input bawah
 
@@ -175,7 +176,7 @@ if (isset($_POST['hitungk'])){
                     </div>
                 </div>
                 <div class="col-sm-3">
-                      <button type="submit" name="totalh" id="" class="btn btn-light">Hitung Total Harga</button>
+                      <button type="submit" name="totalh" id="" class="btn btn-success">Hitung Total Harga</button>
                 </div>
                 </div>
                 </form>
@@ -190,7 +191,7 @@ if (isset($_POST['hitungk'])){
                     <div class="col-sm-2 mt-2">Total Harga</div>
                     <div class="col-sm-3">
                       <div class="mb-3">
-                      <input type="text" class="form-control" value="<?= @$hasilj; ?>" name="" id="" aria-describedby="helpId" placeholder="">
+                      <input type="text" class="form-control" value="<?= @$hasilj; ?>" name="hasilj" id="" aria-describedby="helpId" placeholder="">
                     </div>
                 </div>
                 <div class="col-sm-2 ms-5 mt-2">Pembayaran Berhasil</div>
@@ -213,13 +214,13 @@ if (isset($_POST['hitungk'])){
                     <div class="col-sm-3 ms-3 mt-2"></div>
                     <div class="col-sm-3">
                       <div class="mb-3">
-                          <button type="submit" name="hitungk" id="" class="btn btn-light">Hitung Kembalian</button>
+                          <button type="submit" name="hitungk" id="" class="btn btn-success">Hitung Kembalian</button>
                     </div>
                 </div>
                 <div class="col-sm-2 me-5 mt-2"></div>
                     <div class="col-sm-3 ms-1">
                       <div class="mb-3">
-                          <button type="submit" name="simpan" id="" class="btn btn-light">Simpan Transaksi</button>
+                          <button type="submit" name="simpan" id="" class="btn btn-success">Simpan Transaksi</button>
                     </div>
                 </div>
                 </div>
@@ -231,7 +232,7 @@ if (isset($_POST['hitungk'])){
 
 <!-- Footer -->
 <div class="container-fluid mt-4">
-  <div class="row">
+  <div class="row fixed-bottom mb-3">
     <div class="col-md-12">
       <div class="card mt-5 rounded" style="background-color: #C8D0D5;">
         <div class="card-body">
