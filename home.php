@@ -1,4 +1,13 @@
 <?php
+// Format Rupiah
+function rupiah($angka){
+	
+	$hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+	return $hasil_rupiah;
+ 
+}
+// End Format Rupiah
+
 //Apabila belum login arahkan ke login
 session_start();
 if (!isset($_SESSION['status'])){
@@ -77,7 +86,7 @@ $datapaket = array (
         <div class="card-body">
           <p><?= $value[0]; ?><p>
           <p><?= $value[1]; ?><p>
-          <p><?= $value[2]; ?><p>
+          <p><?= rupiah($value[2]); ?><p>
         </div>
       </div>
       <div class="d-grid gap-2 col-md mx-auto mt-5">
@@ -91,7 +100,7 @@ $datapaket = array (
       <div class="card mt-5 rounded" style="background-color: #C8D0D5;">
         <div class="card-body">
           <div class="text-center text-black">
-            @copyright namapeserta
+            @copyright HafizAbuBakarArsal
           </div>
         </div>
       </div>
