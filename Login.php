@@ -48,7 +48,7 @@ if (isset($_POST['login'])) {
     <!-- TEXT WELCOME -->
     <div class="row justify-content-md-center text-center">
       <div class="col-md-auto mt-3">
-        SELAMAT DATANG DI TECHNOPARK GALLERY <br> SMK 2 BANJARMASIN
+        SELAMAT DATANG DI TECHNOPARK GALLERY <br> SMKN 2 BANJARMASIN
       </div>
     </div>
     <!-- END TEXT WELCOME -->
