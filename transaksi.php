@@ -1,5 +1,23 @@
 
 <?php
+//Apabila belum login arahkan ke login
+session_start();
+if (!isset($_SESSION['status'])){
+header("location:login.php");
+}
+
+
+//Apabila menekan logout hapus session arahkan ke login
+if (isset($_POST['logout'])){
+  $_SESSION = [];
+  session_unset();
+  session_destroy();
+  header("location:login.php");
+}
+
+
+
+
 //Hasil dari get laman home
 @ $pproduk = $_GET['pp'];
 @ $hproduk = $_GET['hp'];
@@ -70,19 +88,21 @@ if (isset($_POST['hitungk'])){
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <form action="" method="post">
     <div class="collapse navbar-collapse ms-5" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="home.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active ms-5" href="#">Transaksi</a>
+          <a class="nav-link active ms-5" href="transaksi.php">Transaksi</a>
         </li>
         <li class="nav-item">
           <button class="nav-link bg-transparent border-0 active position-absolute me-5 end-0 text-white" type="submit" name="logout" >Logout</button>
         </li>
       </ul>
-    </div>
+      </div>
+    </form>
 </nav>
 </div>
 <!-- End navbar -->
@@ -216,7 +236,7 @@ if (isset($_POST['hitungk'])){
       <div class="card mt-5 rounded" style="background-color: #C8D0D5;">
         <div class="card-body">
           <div class="text-center text-black">
-            @copyright namapeserta
+            @copyright HafizAbuBakarArsal
           </div>
         </div>
       </div>
