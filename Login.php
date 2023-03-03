@@ -69,8 +69,7 @@ if (isset($_POST['login'])) {
               </div>
             </div>
             <div class="row">
-              <div class="d-grid gap-4 d-md-flex justify-content-md-center mt-5">
-                <button class="btn btn-light col-md-5" type="button">Register</button>
+              <div class="d-grid gap-4 d-md-flex justify-content-md-center offset-md-2 mt-5">
                 <button class="btn btn-light col-md-5" name="login" type="submit">Login</button>
               </div>
           </form>
